@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div id="app">
+        <div id="loginPage" class="page">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        
+        <div id="loadingPage" class="page">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+        
+        <div id="homePage" class="page">
+            <h1>Welcome Home</h1>
+            <button id="logoutButton">Logout</button>
+            <div id="commentsSection">
+                <h2>Comments</h2>
+                <div id="commentsList"></div>
+                <form id="commentForm">
+                    <textarea id="commentText" placeholder="Write a comment..." required></textarea>
+                    <div id="starRating">
+                        <span data-star="1">&#9733;</span>
+                        <span data-star="2">&#9733;</span>
+                        <span data-star="3">&#9733;</span>
+                        <span data-star="4">&#9733;</span>
+                        <span data-star="5">&#9733;</span>
+                    </div>
+                    <p id="starCount">Rating: 0 stars</p>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
